@@ -9,6 +9,7 @@ const dishRouter = require("./routes/dishRouter");
 const promoRouter = require("./routes/promoRouter");
 const leaderRouter = require("./routes/leaderRouter");
 const usersRouter = require("./routes/users");
+const uploadRouter = require("./routes/uploadRouter");
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 const passport = require("passport");
@@ -53,6 +54,7 @@ app.use("/users", usersRouter);
 app.use("/dishes", dishRouter);
 app.use("/promotions", promoRouter);
 app.use("/leaders", leaderRouter);
+app.use("/imageUpload", uploadRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
